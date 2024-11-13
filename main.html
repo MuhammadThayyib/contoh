@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasil Deteksi Kanker Darah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+    }
+    .header {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #4a4a4a;
+    }
+    .sub-header {
+      margin-top: 8px;
+      padding: 12px;
+      background-color: #fee2e2;
+      border-radius: 8px;
+    }
+    .sub-header div {
+      display: flex;
+      justify-content: space-between;
+    }
+    .sub-header .diagnosis {
+      color: #e11d48;
+      font-weight: bold;
+    }
+    .image-container {
+      position: relative;
+      background-color: #e5e7eb;
+      width: 100%;
+      height: 256px;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+    .image-container .overlay-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+    }
+    .detection-box {
+      position: absolute;
+      border: 2px solid #e11d48;
+      width: 80px;
+      height: 80px;
+    }
+    .detection-box:first-child {
+      left: 25%;
+      top: 25%;
+    }
+    .detection-box:last-child {
+      right: 25%;
+      bottom: 25%;
+    }
+    .detailed-analysis {
+      margin-top: 16px;
+    }
+    .detailed-analysis div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .recommendation {
+      background-color: #fee2e2;
+      padding: 16px;
+      border-radius: 8px;
+      color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bagian Header -->
+    <div class="card">
+      <h2 class="header">Hasil Deteksi Kanker Darah</h2>
+      <div class="sub-header">
+        <div>
+          <span>Diagnosis:</span>
+          <span class="diagnosis">Malignant Pre-B</span>
+        </div>
+        <div>
+          <span>Keyakinan:</span>
+          <span>94%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pratinjau Gambar dengan Deteksi -->
+    <div class="card">
+      <h3 class="header">Hasil Deteksi Sel</h3>
+      <div class="image-container">
+        <div class="overlay-text">Gambar Mikroskop dengan Deteksi</div>
+        <div class="detection-box"></div>
+        <div class="detection-box"></div>
+      </div>
+    </div>
+
+    <!-- Analisis Detail -->
+    <div class="card detailed-analysis">
+      <h3 class="header">Ringkasan Analisis</h3>
+      <div>
+        <span>Jumlah Sel:</span>
+        <span>2</span>
+      </div>
+      <div>
+        <span>Sel Abnormal:</span>
+        <span style="color: #e11d48;">2</span>
+      </div>
+      <div>
+        <span>Rata-rata Keyakinan:</span>
+        <span>92.5%</span>
+      </div>
+    </div>
+
+    <!-- Rekomendasi -->
+    <div class="card recommendation">
+      <h3 class="header">Rekomendasi Medis</h3>
+      <p>Segera berkonsultasi dengan medis sangat dianjurkan</p>
+    </div>
+  </div>
+</body>
+</html>
